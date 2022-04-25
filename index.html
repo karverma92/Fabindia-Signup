@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1455034544950311');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1455034544950311&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <img class="fab-india-logo" src="FabIndia_logo.png" alt="Fab India Bg 1" />
+            <header>Sign Up</header>
+            <p class="deal-banner">Claim your <strong>INR 500 Off</strong> Fabindia voucher by signing up below!</p>
+            <!-- <p class="deal-banner"><strong>Shop</strong> for minimum of <strong>Rs 1000</strong> and get <strong>Rs 500 off</strong></p> -->
+            <form id="signup-form" class="form-control" name="signup-form" onsubmit="return handleFormSubmit()">
+                <div class="form-field">
+                    <label for="firstName">First Name: </label>
+                    <input id="firstName" name="First Name" class="first-name__input" type="text" placeholder="First Name" required />
+                </div>
+                <div class="form-field">
+                    <label for=lastName>Last Name: </label>
+                    <input id="lastName" name="Last Name" class="last-name__input" type="text" placeholder="Last Name" required />
+                </div>
+                <div class="form-field">
+                    <label for="mobile">Mobile Number: </label>
+                    <input id="mobile" name="Mobile Number" type="text" minlength="10" maxlength="10" placeholder="Mobile Number" onkeypress="validateContact(event)" required />
+                </div>
+                <div class="form-field">
+                    <label for="email">Email: </label>
+                    <input id="email" name="Email" type="email" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)" required />
+                </div>
+                <div class="form-field">
+                    <label for="referralCode">Referral Code: </label>
+                    <input id="referralCode" name="Referral Code" type="text" placeholder="Referral Code" />
+                </div>
+                <input type="submit" />
+                <div class="links">
+                    <a href="https://www.fabindia.com/faqs">Terms & Conditions</a>
+                    <a href="https://www.fabindia.com">Fabindia.com</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="mask" class="mask">
+    </div>
+    <div id="loader" class="loader"></div>
+</body>
+
+</html>
