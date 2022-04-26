@@ -23,7 +23,10 @@ function handleFormSubmit() {
             const responseObj = JSON.parse(response);
 
             if (responseObj.result == "success") {
-                window.location.href = 'file:///H:/Projects/FabIndia/thanks.html';
+                const urlArr = window.location.href.split('/');
+                urlArr[urlArr.length - 1] = 'thanks.html';
+                const thanksUrl = urlArr.join('/');
+                window.location.href = thanksUrl;
             } else { alert("FAILURE!"); }
         })
         .catch((err) => { console.error(err); });
